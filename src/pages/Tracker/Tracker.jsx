@@ -43,7 +43,7 @@ const Tracker=() =>{
     <div className="App" style={containerStyle}>
       <h1>Crypto Price Tracker</h1>
       <div>
-        <label htmlFor="binancePrice">Binance USDT Price:</label>
+        <label htmlFor="binancePrice">Binance BTCUSDT Price:</label>
         <input
           type="text"
           id="binancePrice"
