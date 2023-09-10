@@ -6,7 +6,7 @@ const Tracker=() =>{
 
   const fetchPrices = async () => {
     try {
-      const binanceResponse = await fetch('https://api3.binance.com/api/v3/avgPrice?symbol=BTCUSDT');
+      const binanceResponse = await fetch('https://api.binance.com/api/v3/ticker/price?symbol=BTCUSDT');
       const binanceData = await binanceResponse.json();
       setBinancePrice(binanceData.price);
 
@@ -58,6 +58,16 @@ const Tracker=() =>{
           type="text"
           id="wazirxPrice"
           value={wazirxPrice}
+          readOnly
+          style={inputStyle}
+        />
+      </div>
+      <div>
+        <label htmlFor="wazirxPrice">wazirx - binance Price:</label>
+        <input
+          type="text"
+          id="difference"
+          value={wazirxPrice - binancePrice}
           readOnly
           style={inputStyle}
         />
